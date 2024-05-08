@@ -2,5 +2,5 @@
 pub fn get(url: string) -> string
 
 pub fn main() {
-  get("http://fake")
+  get("http://test.k6.io")
 }
