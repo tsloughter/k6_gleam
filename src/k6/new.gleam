@@ -15,7 +15,8 @@ export default main
 pub fn main() {
   let assert Ok(cwd) = simplifile.current_directory()
   let project_name =
-    internal.read_gleam_toml(cwd)
+    cwd
+    |> internal.read_gleam_toml()
     |> internal.get_project_name()
 
   io.println("-- Write runner.mjs")

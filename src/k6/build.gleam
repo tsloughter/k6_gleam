@@ -1,14 +1,13 @@
 import esgleam
-import gleam/string
+import k6/internal
 import simplifile
-import tom
 
 pub fn main() {
   let assert Ok(cwd) = simplifile.current_directory()
-  let gleam_toml_path = string.join([cwd, "gleam.toml"], with: "/")
-  let assert Ok(gleam_toml_contents) = simplifile.read(gleam_toml_path)
-  let assert Ok(gleam_toml) = tom.parse(gleam_toml_contents)
-  let assert Ok(project_name) = tom.get_string(gleam_toml, ["name"])
+  let project_name =
+    cwd
+    |> internal.read_gleam_toml()
+    |> internal.get_project_name()
 
   esgleam.new("./dist/static")
   |> esgleam.entry(project_name <> ".gleam")
