@@ -16,6 +16,7 @@ fn runner_gleam() -> String {
   // TODO(wingyplus): modify this source to a working k6 example.
   "
 import gleam/io
+import k6/http
 
 pub fn main() {
   io.println(\"Hello from k6!\")
