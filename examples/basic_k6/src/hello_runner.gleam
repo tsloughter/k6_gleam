@@ -1,5 +1,7 @@
+
+import gleam/io
 import k6/http
 
 pub fn main() {
-  http.get("https://test.k6.io")
+  io.println("Hello from k6!")
 }
