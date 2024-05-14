@@ -7,7 +7,7 @@ import (
 
 	"github.com/grafana/k6pack"
 	"github.com/sirupsen/logrus"
-	"github.com/tsloughter/k6_gleam/k6-gleam/internal/gleam"
+	"github.com/tsloughter/k6_gleam/xk6-gleam/internal/gleam"
 )
 
 func init() {

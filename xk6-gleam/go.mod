@@ -1,4 +1,4 @@
-module github.com/tsloughter/k6_gleam/k6-gleam
+module github.com/tsloughter/k6_gleam/xk6-gleam
 
 go 1.22.2
 
